@@ -31,9 +31,9 @@ const Navbar = () => {
             >
               Close
             </button>
-            <a href="/about" className="block px-3 py-1">
+            <Link href="/about" className="block px-3 py-1">
               About
-            </a>
+            </Link>
             <a href="/blog" className="block px-3 py-1">
               Blog
             </a>

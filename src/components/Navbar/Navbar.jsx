@@ -20,7 +20,7 @@ const Navbar = () => {
       id: "2",
       span: "02",
       link: "About",
-      href: "/",
+      href: "/about",
     },
     {
       id: "3",
@@ -40,14 +40,12 @@ const Navbar = () => {
   useEffect(() => {
     tlRef.current = gsap.timeline({ paused: true });
 
-    // Setup menu animations with a more interesting entrance
     tlRef.current.fromTo(
       menuRef.current,
       { x: "100%", opacity: 0 },
       { x: "0%", opacity: 1, duration: 0.6, ease: "power3.out" }
     );
 
-    // Stagger the nav links with a more playful animation
     tlRef.current.fromTo(
       linksRef.current,
       {
@@ -72,26 +70,6 @@ const Navbar = () => {
       gsap.set(linksRef.current, { opacity: 0, y: 30 });
     }
 
-    // Setup button hover animation
-    if (buttonRef.current) {
-      buttonRef.current.addEventListener("mouseenter", () => {
-        gsap.to(buttonRef.current, {
-          scale: 1.05,
-          duration: 0.3,
-          ease: "power1.out",
-        });
-      });
-
-      buttonRef.current.addEventListener("mouseleave", () => {
-        gsap.to(buttonRef.current, {
-          scale: 1,
-          duration: 0.3,
-          ease: "power1.out",
-        });
-      });
-    }
-
-    // Setup link hover animations
     linksRef.current.forEach((link) => {
       if (link) {
         link.addEventListener("mouseenter", () => {
@@ -160,7 +138,7 @@ const Navbar = () => {
                 <Link
                   to={links.href}
                   key={links.id}
-                  className="flex gap-x-4 items-center"
+                  className="flex gap-x-4 items-center hover:text-blue-500"
                   ref={(el) => (linksRef.current[index] = el)}
                 >
                   <span className="font-num">{links.span}</span>
@@ -169,6 +147,7 @@ const Navbar = () => {
               );
             })}
           </ul>
+
         </div>
       </div>
     </div>

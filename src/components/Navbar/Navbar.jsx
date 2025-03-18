@@ -91,7 +91,6 @@ const Navbar = () => {
     });
   }, []);
 
-  // Control the animation when menu state changes
   useEffect(() => {
     if (menuOpen) {
       tlRef.current.play();
@@ -147,7 +146,6 @@ const Navbar = () => {
               );
             })}
           </ul>
-
         </div>
       </div>
     </div>

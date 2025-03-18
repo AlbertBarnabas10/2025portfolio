@@ -26,6 +26,7 @@ const App = () => {
             path="/"
             element={
               <>
+              <Navbar/>
                 <Home />
               </>
             }

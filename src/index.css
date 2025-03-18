@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: ChicAvenue-Regular;
+  src: url('./fonts/chic-avenue/ChicAvenue-Regular.otf');
+}
+
 @layer base {
   *,
   *::before,
@@ -23,5 +28,15 @@
   .font-num{
     font-family:'MonteCarlo', cursive;
     font-size: 16px;
+  }
+
+  .hero-head{
+    font-family: 'Lora', serif;
+    font-style: italic;
+    /* font-weight: 100; */
+    /* font-family: 'ChicAvenue-Regular'; */
+    color: #0A0A0A;
+    font-size: 90px;
+    line-height: 1;
   }
 }

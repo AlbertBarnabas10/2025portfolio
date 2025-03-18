@@ -110,7 +110,7 @@ const Navbar = () => {
         <Link className="custom-font" to="/">
           abet
         </Link>
-      </div>
+      </div>  
       <div className="nav-menu">
         <button
           ref={buttonRef}
@@ -122,7 +122,7 @@ const Navbar = () => {
 
         <div
           ref={menuRef}
-          className="absolute w-[500px] h-screen flex flex-col items-end gap-y-4 top-0 right-0 bg-red-50 rounded-md px-20 py-6"
+          className="absolute w-[500px] h-screen flex flex-col items-end gap-y-4 top-0 right-0 bg-white shadow-md rounded-md px-20 py-6"
           style={{ opacity: 0, transform: "translateX(100%)" }}
         >
           <button
@@ -137,7 +137,7 @@ const Navbar = () => {
                 <Link
                   to={links.href}
                   key={links.id}
-                  className="flex gap-x-4 items-center hover:text-blue-500"
+                  className="flex gap-x-4 items-center text-black hover:text-blue-500"
                   ref={(el) => (linksRef.current[index] = el)}
                 >
                   <span className="font-num">{links.span}</span>

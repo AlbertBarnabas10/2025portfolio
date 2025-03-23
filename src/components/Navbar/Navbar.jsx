@@ -122,7 +122,7 @@ const Navbar = () => {
 
         <div
           ref={menuRef}
-          className="absolute w-[500px] h-screen flex flex-col items-end gap-y-4 top-0 right-0 bg-white shadow-md rounded-md px-20 py-6"
+          className="absolute w-[500px] h-screen flex flex-col items-end gap-y-4 top-0 right-0 bg-white shadow-md rounded- px-20 py-6"
           style={{ opacity: 0, transform: "translateX(100%)" }}
         >
           <button

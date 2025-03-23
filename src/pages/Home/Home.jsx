@@ -23,17 +23,22 @@ const Home = () => {
     <>
      <section className="home w-full px-20">
       <div className="home-content w-full grid grid-cols-2 gap-4 items-stretch min-h-[90vh]">
-        <div className="left-content w-full flex items-center justify-center">
-          <p className="hero-head">Hello, I'm <br/> Albert Barnabas.</p>
+        <div className="left-content w-full flex flex-col items-center justify-center">
+          <p className="hero-head text-center">Hello, I'm <br/> Albert Barnabas.</p>
         </div>
         <div className="right-content w-full flex items-center justify-center">
           <p className="text-md max-w-[80%]">
           <span>
-            I’m Albert, currently working as a freelance designer focusing on website design. I love crafting cool interfaces. My goal is to become a Product Designer or UX Engineer and, hey, maybe even start my own creative agency down the road!
+            Currently working as a UI/UX designer <a className='text-[#EF5214] italic' href='https://www.sefasgroup.com' target="_blank">@Sefasgroup</a>.
           </span>
+          <br/>
           <span>
-            I admire those who can code, transitioning from visual to interactive interfaces really caught my eyes. That’s why I’m half way learning too.
+            A designer focused on crafting user centric digital product.
           </span>
+          {/* <span>
+          Crafting user centric digital product.
+            I admire those who can code, transitioning from visual to interactive interfaces really caught my eyes. That’s why I’m half way learning too.
+          </span> */}
           </p>
         </div>
       </div>
@@ -48,8 +53,8 @@ const Home = () => {
         </div>
         <div className="footer-right">
           <div className="flex items-center gap-1">
-            <Link to="/contact">Contact me</Link>
-            <img src="/svg/arrowRU.svg" className="w-4 h-4" />
+            <Link className="text-sm" to="/contact">Contact me</Link>
+            <img src="/svg/arrowRU.svg" className="w-5 h-5" />
           </div>
           <div className="date flex items-center gap-2">
             <p className="text-xs">{timeString}</p>

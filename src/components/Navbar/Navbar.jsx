@@ -110,7 +110,7 @@ const Navbar = () => {
         <Link className="custom-font" to="/">
           abet
         </Link>
-      </div>  
+      </div>
       <div className="nav-menu">
         <button
           ref={buttonRef}
@@ -138,6 +138,7 @@ const Navbar = () => {
                   to={links.href}
                   key={links.id}
                   className="flex gap-x-4 items-center text-black hover:text-blue-500"
+                  onClick={handleMenuClick}
                   ref={(el) => (linksRef.current[index] = el)}
                 >
                   <span className="font-num">{links.span}</span>
